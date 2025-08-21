@@ -1,0 +1,37 @@
+@charset "utf-8";
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+
+.c-scroll {
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+
+    @include media(md) {
+        display: none;
+    }
+
+    &::before {
+        content: "";
+        animation: scroll 2s infinite;
+        background-color: $base-color-primary;
+        border-radius: $border-radius-size;
+        width: 4px;
+        margin: auto;
+        bottom: -140px;
+        height: 120px;
+        left: 0;
+        position: absolute;
+        right: 0;
+    }
+
+    &__item {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $base-color-primary;
+        padding: 8px 12px;
+        border-radius: $border-radius-size;
+    }
+}

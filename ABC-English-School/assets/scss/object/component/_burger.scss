@@ -1,0 +1,40 @@
+@charset "utf-8";
+@use "../../foundation/variables" as *;
+
+
+.c-burger {
+    width: 80px;
+    height: 80px;
+    background-color: $base-color-primary;
+    border-radius: $border-radius-size;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+
+    &--line {
+        width: 60px;
+        height: 4px;
+        background-color: $base-color-sub;
+        border-radius: $border-radius-size;
+        transition: all 0.4s;
+        position: absolute;
+    }
+
+    &--line:nth-child(1) {
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &--line:nth-child(2) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &--line:nth-child(3) {
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

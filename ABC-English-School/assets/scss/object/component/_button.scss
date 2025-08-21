@@ -1,0 +1,42 @@
+@charset "utf-8";
+@use "../../foundation/variables" as *;
+
+.c-button__reverse--item,
+.c-button--item {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $base-color-primary;
+    background-color: $base-color-sub;
+    border-radius: calc($border-radius-size / 2);
+    padding: 12px 32px;
+    box-shadow: 0 4px 4px $base-color-shadow;
+
+    &:active {
+        position: relative;
+        top: 4px;
+        box-shadow: none;
+    }
+}
+
+.c-button__wrapper {
+    text-align: center;
+    margin-top: 60px;
+
+    .c-button:last-child {
+        margin-left: 0;
+    }
+}
+
+.c-button {
+    display: inline-block;
+
+    &--item {
+        color: $base-color-sub;
+        background-color: $base-color-primary;
+    }
+
+    &:last-child {
+        margin-left: 40px;
+    }
+}

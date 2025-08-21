@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+// color
+$base-color-primary: #E83838;
+$base-color-sub: #fff;
+$base-color-shadow: #960000;
+$point-color-primary: #e0edff;
+$text-color-primary: #333;
+$bg-color-sub: #D6D5D5;
+$line-color: #878787;
+
+// font
+$base-font-size: 80%;
+$base-font-weight: 400;
+
+// size
+$border-radius-size: 16px;
+
+// breakpoints
+$breakpoints: (
+    'sm': 'screen and (max-width: 576px)',
+    'md': 'screen and (max-width: 768px)',
+    'lg': 'screen and (max-width: 992px)',
+    'xl': 'screen and (max-width: 1200px)',
+) !default;

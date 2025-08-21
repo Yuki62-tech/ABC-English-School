@@ -1,0 +1,59 @@
+@charset "utf-8";
+@use "../../foundation/variables" as *;
+@use "../../foundation/mixin" as *;
+
+.c-table {
+    display: block;
+    width: 100%;
+    padding: 40px;
+    margin-bottom: 40px;
+    background-color: $base-color-sub;
+    border-radius: $border-radius-size;
+    text-align: left;
+
+    &__row {
+        display: block;
+        max-width: 100%;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $line-color;
+
+        &:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+
+        .c-table__head {
+            width: 120px;
+
+            @include media(md) {
+                display: inline-block;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            &--item {
+                font-size: 1.1rem;
+            }
+        }
+
+        .c-table__body {
+            @include media(md) {
+                display: block;
+            }
+
+            &--text {
+                font-size: 1.1rem;
+                line-height: 1.6;
+            }
+        }
+
+        .c-table__list--item {
+            list-style: disc;
+            list-style-position: inside;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@charset "utf-8";
+@use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
+
+.l-footer {
+    background-color: $bg-color-sub;
+
+    .l-inner {
+        @include media(md) {
+            flex-direction: column;
+            padding: 16px 4%;
+        }
+    }
+}
