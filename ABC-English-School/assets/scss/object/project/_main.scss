@@ -338,7 +338,6 @@ news
         border-top: 1px solid $line-color;
         margin-top: 20px;
         padding-top: 20px;
-        cursor: pointer;
         position: relative;
 
         &:last-child {
@@ -378,15 +377,20 @@ news
             padding: 4px 10px;
         }
 
-        .p-news__text {
+        .p-news__title {
             display: inline-block;
             font-size: 1.2rem;
+            border-bottom: 2px solid $line-color;
             margin-left: 28px;
 
             @include media(md) {
                 display: block;
                 margin: 16px 0 0;
             }
+        }
+
+        .p-news__noPost {
+            font-size: 1.1rem;
         }
     }
 }

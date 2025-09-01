@@ -1170,7 +1170,6 @@ news
   border-top: 1px solid #878787;
   margin-top: 20px;
   padding-top: 20px;
-  cursor: pointer;
   position: relative;
 }
 .p-news__wrapper--item:last-child {
@@ -1208,16 +1207,20 @@ news
   border-radius: 16px;
   padding: 4px 10px;
 }
-.p-news__wrapper--item .p-news__text {
+.p-news__wrapper--item .p-news__title {
   display: inline-block;
   font-size: 1.2rem;
+  border-bottom: 2px solid #878787;
   margin-left: 28px;
 }
 @media screen and (max-width: 768px) {
-  .p-news__wrapper--item .p-news__text {
+  .p-news__wrapper--item .p-news__title {
     display: block;
     margin: 16px 0 0;
   }
+}
+.p-news__wrapper--item .p-news__noPost {
+  font-size: 1.1rem;
 }
 
 /*---------------------------------------
