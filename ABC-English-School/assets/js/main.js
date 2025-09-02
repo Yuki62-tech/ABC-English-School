@@ -18,7 +18,7 @@ mask.onclick = () => {
 /*
 jQuery
 */
-$(function() {
+(function($) {
   // 画面が読み込まれたとき
   $(".u-fadeIn--scroll").addClass("show");
   // スクロールしたとき
@@ -37,4 +37,4 @@ $(function() {
       }
     });
   });
-});
+})(jQuery);

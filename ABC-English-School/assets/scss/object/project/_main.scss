@@ -13,14 +13,13 @@ header
 .p-header__nav {
     display: block;
     width: 260px;
-    height: 400px;
+    height: calc(100vh - 100px);
     background-color: $base-color-primary;
     border-radius: $border-radius-size 0 0 $border-radius-size;
     opacity: 0;
     transition: all 0.4s;
     position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 100px;
     right: -300px;
     z-index: 3;
 }
@@ -342,7 +341,8 @@ news
 
         &:last-child {
             border-bottom: 1px solid $line-color;
-            padding-bottom: 16px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
         }
 
         &::after {
@@ -357,42 +357,50 @@ news
             right: 24px;
             transform: rotate(-45deg);
         }
-
-        .p-news__time {
-            display: inline-block;
-            font-size: 1.2rem;
-            width: 160px;
-
-            @include media(lg) {
-                display: block;
-                margin-bottom: 20px;
-            }
-        }
-
-        .p-news__label {
-            font-size: 1.1rem;
-            color: $base-color-sub;
-            background-color: $base-color-primary;
-            border-radius: $border-radius-size;
-            padding: 4px 10px;
-        }
-
-        .p-news__title {
-            display: inline-block;
-            font-size: 1.2rem;
-            border-bottom: 2px solid $line-color;
-            margin-left: 28px;
-
-            @include media(md) {
-                display: block;
-                margin: 16px 0 0;
-            }
-        }
-
-        .p-news__noPost {
-            font-size: 1.1rem;
-        }
     }
+}
+
+.p-news__time {
+    display: inline-block;
+    font-size: 1.2rem;
+    width: 160px;
+
+    @include media(lg) {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.p-news__label {
+    font-size: 1.1rem;
+    color: $base-color-sub;
+    background-color: $base-color-primary;
+    border-radius: $border-radius-size;
+    padding: 4px 10px;
+
+    &--sub {
+        @extend .p-news__label;
+        display: inline-block;
+    }
+}
+
+.p-news__title {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-left: 28px;
+
+    @include media(md) {
+        display: block;
+        margin: 16px 0 0;
+    }
+}
+
+.p-news__content {
+    font-size: 1.2rem;
+}
+
+.p-news__noPost {
+    font-size: 1.1rem;
 }
 
 
@@ -485,4 +493,67 @@ contact
     .c-table__head {
         width: 180px;
     }
+}
+
+/*---------------------------------------
+notFound
+---------------------------------------*/
+.p-notFound__wrapper {
+    max-width: 840px;
+    margin: 120px auto 40px;
+    padding: 40px;
+    background-color: $base-color-primary;
+    border-radius: $border-radius-size;
+    text-align: center;
+}
+
+.p-notFound__text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: $base-color-sub;
+}
+
+/*---------------------------------------
+投稿ページ
+---------------------------------------*/
+.l-post {
+    max-width: 840px;
+    margin: 120px auto 40px;
+    padding: 40px;
+    background-color: $base-color-primary;
+    border-radius: $border-radius-size;
+
+    &__wrapper {
+        padding: 40px;
+        background-color: $base-color-sub;
+
+        .p-post__time {
+            display: inline-block;
+            font-size: 1.2rem;
+            margin-right: 16px;
+        }
+
+        .p-post__label {
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+
+        .p-post__title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 16px 0;
+        }
+
+        .p-post__content {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    }
+}
+
+/*---------------------------------------
+category
+---------------------------------------*/
+.p-category__title {
+    margin: 24px 0;
 }

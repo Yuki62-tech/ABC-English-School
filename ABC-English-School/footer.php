@@ -40,12 +40,6 @@
     </footer>
     <!-- /footer -->
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <!-- js -->
-    <script src="<?php echo get_theme_file_uri('./assets/js/main.js'); ?>"></script>
-
     <?php wp_footer(); ?>
 </body>
 
