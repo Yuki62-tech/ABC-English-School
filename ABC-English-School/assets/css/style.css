@@ -389,6 +389,7 @@ th {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -942,6 +943,12 @@ keyVisual
 /*---------------------------------------
 course
 ---------------------------------------*/
+.l-course {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 .p-course__wrapper {
   margin-top: 40px;
   padding: 40px 0;
